@@ -1,0 +1,19 @@
+name: rssync
+version: 0.1.0
+
+authors:
+  - Lars Kluge <l@larskluge.com>
+
+description: |
+  Sync a source Redis Stream to another destination stream, located on the same or a different Redis instance.
+
+dependencies:
+  redis:
+    github: aemadrid/crystal-redis
+    branch: feature/streams
+
+targets:
+  rssync:
+    main: src/main.cr
+
+license: MIT
