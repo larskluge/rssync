@@ -3,6 +3,15 @@
 Sync a source Redis Stream to another destination
 
 
+## Build
+
+```
+shards install
+shards build --release
+bin/rssync # prints help
+```
+
+
 ## Usage
 
 ```
