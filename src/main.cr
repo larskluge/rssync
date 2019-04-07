@@ -55,8 +55,10 @@ else
 end
 
 while (entries = src.xrange(src_key, latest, "+", count: 1_000)) && !entries.empty?
+  print "."
   entries.each do |(k,v)|
     dst.xadd dst_key, v, id: k
   end
   latest = next_key(entries.keys.last.as(String))
 end
+puts "done"
