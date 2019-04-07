@@ -54,7 +54,7 @@ else
   puts "dst: creating.."
 end
 
-while (entries = src.xrange(src_key, latest, "+", count: 100)) && !entries.empty?
+while (entries = src.xrange(src_key, latest, "+", count: 1_000)) && !entries.empty?
   entries.each do |(k,v)|
     dst.xadd dst_key, v, id: k
   end
